@@ -1,0 +1,283 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Book-Rental",
+    "collectionId": "b7133922-248a-447b-959b-5515c7439791",
+    "dateExported": "2024-09-08T13:27:18.530Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "1519ab43-9143-430c-bb7f-63a85f7fe551",
+            "name": "user",
+            "containerId": "",
+            "created": "2024-09-07T08:48:05.408Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "5ca9d4b3-ee94-45f4-9d4d-c05e27bd885f",
+            "name": "book",
+            "containerId": "",
+            "created": "2024-09-07T10:27:25.676Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "b2bc0bc4-a7d9-41c6-aec8-a081ddc86d8f",
+            "name": "Transaction",
+            "containerId": "",
+            "created": "2024-09-07T14:41:11.191Z",
+            "sortNum": 30000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "d8ea2b5f-bed0-4a5d-978c-0c8e039b1661",
+            "colId": "b7133922-248a-447b-959b-5515c7439791",
+            "containerId": "1519ab43-9143-430c-bb7f-63a85f7fe551",
+            "name": "user-create",
+            "url": "localhost:5000/api/users/create",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-09-07T08:48:17.218Z",
+            "modified": "2024-09-08T10:34:03.523Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": " {\n    \"name\": \"Rohit Shrama\",\n    \"email\": \"rs@example.com\",\n    \"phone\": \"1234567894\",\n    \"gender\": \"Male\",\n    \"age\": 43\n  }",
+                "form": []
+            }
+        },
+        {
+            "_id": "8ba8833c-838c-4b5a-b272-f783aa9ce15e",
+            "colId": "b7133922-248a-447b-959b-5515c7439791",
+            "containerId": "5ca9d4b3-ee94-45f4-9d4d-c05e27bd885f",
+            "name": "book - create",
+            "url": "localhost:5000/api/books/books/create",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-09-07T10:28:04.286Z",
+            "modified": "2024-09-08T10:42:36.574Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{      \"bookName\": \"Alien\",\n    \"category\": \"Science Fiction\",\n    \"rentPerDay\": 10\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "30ee072e-efbc-4f5e-bce0-2a38ddcbf183",
+            "colId": "b7133922-248a-447b-959b-5515c7439791",
+            "containerId": "5ca9d4b3-ee94-45f4-9d4d-c05e27bd885f",
+            "name": "book -  getAllBooks",
+            "url": "localhost:5000/api/books/books/allBooks",
+            "method": "GET",
+            "sortNum": 35000,
+            "created": "2024-09-08T07:55:32.077Z",
+            "modified": "2024-09-08T07:57:20.524Z",
+            "headers": []
+        },
+        {
+            "_id": "4a5f1d7d-58fb-49c3-9303-84643eee4504",
+            "colId": "b7133922-248a-447b-959b-5515c7439791",
+            "containerId": "5ca9d4b3-ee94-45f4-9d4d-c05e27bd885f",
+            "name": "book - getBookByName",
+            "url": "localhost:5000/api/books/books/name?bookName=game of thrones",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-09-07T10:33:12.454Z",
+            "modified": "2024-09-08T10:47:02.839Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "bookName",
+                    "value": "game of thrones",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "ebda2479-e16c-4e1a-8a1d-deb383e692f7",
+            "colId": "b7133922-248a-447b-959b-5515c7439791",
+            "containerId": "5ca9d4b3-ee94-45f4-9d4d-c05e27bd885f",
+            "name": "book - getBooksByRentRange",
+            "url": "localhost:5000/api/books/books/rent?minRent=10&maxRent=20",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2024-09-07T10:56:59.967Z",
+            "modified": "2024-09-08T10:49:06.907Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "minRent",
+                    "value": "10",
+                    "isPath": false
+                },
+                {
+                    "name": "maxRent",
+                    "value": "20",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "89e4cbb9-33e2-49a0-b305-13d93fe9f3e0",
+            "colId": "b7133922-248a-447b-959b-5515c7439791",
+            "containerId": "5ca9d4b3-ee94-45f4-9d4d-c05e27bd885f",
+            "name": "book - getBooksByCategoryAndRent",
+            "url": "localhost:5000/api/books/books/category-rent?category=science fiction&bookName=Harry potter&minRent=10&maxRent",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2024-09-07T11:03:06.054Z",
+            "modified": "2024-09-08T10:53:39.041Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "category",
+                    "value": "science fiction",
+                    "isPath": false
+                },
+                {
+                    "name": "bookName",
+                    "value": "Harry potter",
+                    "isPath": false
+                },
+                {
+                    "name": "minRent",
+                    "value": "10",
+                    "isPath": false
+                },
+                {
+                    "name": "maxRent",
+                    "value": "",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "b71ffc69-37ab-4555-84dc-ee32092de982",
+            "colId": "b7133922-248a-447b-959b-5515c7439791",
+            "containerId": "1519ab43-9143-430c-bb7f-63a85f7fe551",
+            "name": "user -  get Users",
+            "url": "localhost:5000/api/users/users",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2024-09-07T13:48:35.063Z",
+            "modified": "2024-09-07T13:49:24.803Z",
+            "headers": []
+        },
+        {
+            "_id": "4b2ec9e7-f911-49dd-9488-cd582bad026e",
+            "colId": "b7133922-248a-447b-959b-5515c7439791",
+            "containerId": "b2bc0bc4-a7d9-41c6-aec8-a081ddc86d8f",
+            "name": "Transaction- issueBook",
+            "url": "localhost:5000/api/transactions/transactions/issue",
+            "method": "POST",
+            "sortNum": 120000,
+            "created": "2024-09-07T14:41:52.066Z",
+            "modified": "2024-09-08T11:39:23.300Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"bookName\": \"Harry potter\",\n  \"userId\": \"66dd77cc0be0c491ded1096c\",\n  \"issueDate\": \"2023-09-01\"\n}\n",
+                "form": []
+            }
+        },
+        {
+            "_id": "01961189-312b-4503-9895-1da373ab48fa",
+            "colId": "b7133922-248a-447b-959b-5515c7439791",
+            "containerId": "b2bc0bc4-a7d9-41c6-aec8-a081ddc86d8f",
+            "name": "Transaction - returnBook",
+            "url": "localhost:5000/api/transactions/transactions/return",
+            "method": "POST",
+            "sortNum": 140000,
+            "created": "2024-09-07T14:42:30.650Z",
+            "modified": "2024-09-08T11:40:18.971Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"bookId\": \"66dc2fd6d2a90f98dec1f17c\",\n  \"userId\": \"66dd77cc0be0c491ded1096c\",\n  \"returnDate\": \"2023-09-10\"\n}\n",
+                "form": []
+            }
+        },
+        {
+            "_id": "5267ce3b-19e4-4f98-b25e-55d3502c4201",
+            "colId": "b7133922-248a-447b-959b-5515c7439791",
+            "containerId": "b2bc0bc4-a7d9-41c6-aec8-a081ddc86d8f",
+            "name": "Transaction - get Books Transactions",
+            "url": "localhost:5000/api/transactions/transactions/books?bookName=harry",
+            "method": "GET",
+            "sortNum": 210000,
+            "created": "2024-09-08T10:57:19.506Z",
+            "modified": "2024-09-08T11:15:11.237Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "bookName",
+                    "value": "harry",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "23869f5a-8b1f-469c-8d50-fa7695b4532d",
+            "colId": "b7133922-248a-447b-959b-5515c7439791",
+            "containerId": "b2bc0bc4-a7d9-41c6-aec8-a081ddc86d8f",
+            "name": "Transaction - getTotalRentForBook",
+            "url": "localhost:5000/api/transactions/transactions/rent?bookName=harry",
+            "method": "GET",
+            "sortNum": 230000,
+            "created": "2024-09-08T11:16:29.916Z",
+            "modified": "2024-09-08T11:36:23.121Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "bookName",
+                    "value": "harry",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "65406ae9-456c-49dd-997f-2d79baee2d95",
+            "colId": "b7133922-248a-447b-959b-5515c7439791",
+            "containerId": "b2bc0bc4-a7d9-41c6-aec8-a081ddc86d8f",
+            "name": "Transaction - getBooksIssuedToUser",
+            "url": "localhost:5000/api/transactions/transactions/user?userId=66dd77cc0be0c491ded1096c",
+            "method": "GET",
+            "sortNum": 250000,
+            "created": "2024-09-08T11:31:49.572Z",
+            "modified": "2024-09-08T11:39:43.733Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "userId",
+                    "value": "66dd77cc0be0c491ded1096c",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "15a2cf1e-d55a-4705-ac8a-87f5f455a0d8",
+            "colId": "b7133922-248a-447b-959b-5515c7439791",
+            "containerId": "b2bc0bc4-a7d9-41c6-aec8-a081ddc86d8f",
+            "name": "Transaction - getBooksIssuedInDateRange",
+            "url": "localhost:5000/api/transactions/transactions/date?startDate=2023-09-01&endDate=2023-09-10",
+            "method": "GET",
+            "sortNum": 270000,
+            "created": "2024-09-08T11:32:11.045Z",
+            "modified": "2024-09-08T12:34:05.607Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "startDate",
+                    "value": "2023-09-01",
+                    "isPath": false
+                },
+                {
+                    "name": "endDate",
+                    "value": "2023-09-10",
+                    "isPath": false
+                }
+            ]
+        }
+    ],
+    "ref": "ZxR7qQefqr8JHHwCMuydPMj-m_F88Vn1j4i4QIeiw7VC3XWHPxAh-fdfPO8k6x8ID2xOvC6Y83uCTeoUqQbCQA"
+}
